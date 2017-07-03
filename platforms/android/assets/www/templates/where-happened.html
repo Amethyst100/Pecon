@@ -1,0 +1,24 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      ¿DÓNDE HA PASADO?
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header">
+
+    <div class="what-heading-container">
+      <h5 class="margin0 padding0 what-heading">ELIGE UNO</h5>
+      <ion-list class="incident-list-container">
+        <ion-item ng-repeat="place in places" class="incident-list-item" ng-click="save(place)">
+          <img class="avatar-without-border" src="{{place.pic}}" alt="" />
+          <h1 style="padding-top:3vw">{{place.title}}</h1>
+          <p>{{place.description}}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,438 @@
+/*
+    CSS styles to eliminate the annoying flickering header when changing tabs in an Ionic app on Android:
+    http://forum.ionicframework.com/t/flickering-when-navigating-via-tabs-on-android/27281/2
+*/
+.platform-android .header-item.title {
+  transition-duration: 0ms;
+}
+.platform-android .header-item.buttons {
+  transition-duration: 0ms;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src:url('../fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src:url('../fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src:url('../fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Light.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+.background{
+  background-color:#562F72;
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+.margin0{
+  margin: 0;
+}
+.padding0{
+  padding: 0;
+}
+.divider{
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  border-left:2px solid #eeeeee;
+}
+.divider-1{
+  position:absolute;
+  left:0;
+  top:33.33%;
+  right:0;
+  border-top:2px solid #eeeeee;
+}
+.divider-2{
+  position:absolute;
+  left:0;
+  bottom:33.33%;
+  right:0;
+  border-top:2px solid #eeeeee;
+}
+.divider-3{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  border-top:2px solid #eeeeee;
+}
+.scroll-bar-indicator
+{
+  display: none;
+}
+.avatar {
+  width: 19vw;
+  height: 19vw;
+  float: left;
+  margin-right: 1em;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #e7e7e7, 0 2px 5px 4px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #e7e7e7, 0 2px 5px 4px rgba(0,0,0,.1);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #e7e7e7, 0 2px 5px 4px rgba(0,0,0,.1);
+}
+.avatar-without-border{
+  width: 19vw;
+  height: 19vw;
+  float: left;
+  margin-right: 1em;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+}
+.error{
+  color: #ed7e84;
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 5vw;
+}
+.error-bg{
+  background-color: #ffb3b3;
+}
+.spinner svg{
+  stroke: #fdd600;
+  fill: #fdd600;
+}
+/********************************Login***************************************/
+.logo-container-parent{
+  margin: auto;
+}
+.logo-container{
+  margin-left: 12vw;
+  margin-top: 19.53vw;
+}
+.logo{
+  display:block;
+  width: 21vw;
+}
+.logo-text-container{
+  margin-left:6vw;
+  /*added 3vw for android*/
+}
+.logo-heading{
+  font-family: "ProximaNova";
+  font-weight: bold;
+  font-size: 8.59vw;
+  float: left;
+  color: #fdd600;
+  margin-top: 22vw;
+}
+.logo-line{
+  font-family: "ProximaNova";
+  font-weight: 100;
+  font-size: 5.62vw;
+  float: left;
+  color:#FEFEFE;
+}
+
+.form-container{
+  margin-top:21.56vw;
+  max-width: 84.6vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.marginTop15{
+  margin-top:15px ;
+}
+
+
+.height60{
+  /*height:7.69vh;*/
+}
+.input-label{
+  width: 5vw;
+  margin-right: 5px;
+}
+.icon{
+  font-size: 5vw;
+}
+.item-input{
+  /*padding: 3.7vw 4.6vw 3.7vw 4.6vw ;*/
+}
+.item-input input{
+  font-family: "ProximaNova";
+  font-weight: 100;
+  font-size: 5.1vw;
+  height: 100%;
+}
+.forgot{
+  font-family: "ProximaNova";
+  font-weight: 100;
+  font-size: 4.68vw;
+  color:#FDD600;
+  margin-top: 7.8vw;
+}
+.form-container button{
+  font-family: "ProximaNova";
+  font-weight: 100;
+  font-size: 6.4vw;
+  height: 17.49vw;
+  margin-top: 19.24vw;
+  border-radius:0 ;
+  background-color: #fdd600;
+  color: #562f72;
+}
+.form-container .spinner-container{
+  margin-top: 19.24vw;
+  text-align: center
+}
+/********************************Dashboard-Report***************************************/
+
+.progress-container{
+  padding: 3.12vw 3.75vw 3.12vw 3.75vw ;
+  border-bottom: 2px solid #eeeeee;
+}
+.progress-heading{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 4.15vw;
+  color:#562F72;
+  font-weight:300;
+}
+.progress-status-container{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 2.9vw;
+  color:#232323;
+  font-weight:300;
+  margin-top: 2vw;
+}
+
+.status{
+  display: inline-block;
+}
+.status .icon{
+  font-size: 2.9vw;
+}
+.dashboard-buttons-container{
+  height: 100%;
+  position: relative;
+}
+.dashboard-buttons-container .row{
+  height: 33.33%;
+}
+.dashboard-report-button{
+  text-align: center;
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 3.6vw;
+  padding-top: 9vw;
+  padding-bottom: 9vw;
+  /*background-color: #fdfdfd;*/
+}
+.dashboard-report-button p{
+  color:#562F72;
+  margin-top: 2vw;
+}
+.dashboard-report-icon{
+  display: block;
+  width: 14.06vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-save-disorder{
+  height: 12vw !important;
+  font-size: 3.9vw !important;
+}
+/********************************Dashboard-space***************************************/
+
+.community-report-container{
+  padding: 3.12vw 3.75vw 3.12vw 3.75vw ;
+  border-bottom: 2px solid #eeeeee;
+}
+.community-report-heading{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 4.15vw;
+  color:#562F72;
+  font-weight:300;
+}
+.community-report-status-container{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 2.9vw;
+  color:#232323;
+  font-weight:300;
+  margin-top: 2vw;
+}
+
+.status{
+  display: inline-block;
+}
+.status .icon{
+  font-size: 2.9vw;
+}
+
+.dashboard-buttons-container{
+  height: 100%;
+  position: relative;
+}
+.dashboard-buttons-container .row{
+  height: 33.33%;
+}
+.dashboard-space-button{
+  text-align: center;
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 3.6vw;
+  padding-top: 9vw;
+  padding-bottom: 9vw;
+  /*background-color: #fdfdfd;*/
+}
+.dashboard-space-button p{
+  color:#562F72;
+  margin-top: 2vw;
+}
+.dashboard-space-icon{
+  display: block;
+  width: 14.06vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/********************************What, whom, who, when, where, saw***************************************/
+.what-heading-container{
+  background-color: #eeeeee;
+}
+.what-heading{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 4.15vw;
+  color:#9d9d9d;
+  font-weight:300;
+  padding:3.43vw 3.43vw 1.43vw 3.43vw ;
+}
+.incident-list-item h1{
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 4.06vw;
+  color:#333333;
+  margin-top: 3vw;
+}
+.incident-list-item p{
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 3.01vw;
+  color:#333333;
+}
+.confirm-button-container{
+  position: fixed;
+  bottom: 0;
+  width: 100vw
+}
+.btn-confirm{
+  width: 100vw;
+  height: 17vw;
+  font-family: "ProximaNova";
+  font-weight: 100;
+  font-size: 5.1vw;
+  background-color: #562f72 ;
+  color: #ffffff;
+}
+.date-time-icon-container{
+  height: 100%;
+}
+.date-button, .time-button{
+  display: block;
+  width: 37.5vw;
+  height: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:11.71vw;
+  text-align: center;
+}
+.date-button img, .time-button img{
+  width: 100%;
+}
+.date-button p, .time-button p{
+  font-family: "ProximaNova";
+  /*font-weight: normal;*/
+  font-size: 6.2vw;
+  color:#562f72;
+  font-weight:normal;
+  margin-top: 4vw;
+}
+
+/********************************Case Details***************************************/
+.case-heading-container{
+  background-color: #f6f2f8;
+  padding:3.43vw 3.43vw 1.43vw 3.43vw ;
+}
+.case-heading{
+  font-family: "ProximaNova";
+  font-size: 4.15vw;
+  color:#000000;
+  font-weight:normal;
+}
+
+.case-heading-text{
+  font-family: "ProximaNova";
+  font-size: 3.9vw;
+  color:#000000;
+  font-weight:300;
+}
+.case-detail-container{
+  background-color: #f6f2f8;
+  padding:0vw 3.43vw 1.43vw 3.43vw ;
+}
+.case-detail-heading{
+  font-family: "ProximaNova";
+  font-size: 4.15vw;
+  color:#000000;
+  font-weight:normal;
+}
+
+.case-detail-text{
+  font-family: "ProximaNova";
+  font-size: 3.9vw;
+  color:#000000;
+  font-weight:300;
+}
+
+.case-answer-container{
+  background-color: #eeeeee;
+  padding:2.43vw 3.43vw 1.43vw 3.43vw ;
+}
+.case-answer-heading{
+  font-family: "ProximaNova";
+  font-size: 2.81vw;
+  color:#000000;
+  font-weight:100;
+}
+.answer-list-item h1{
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 4.06vw;
+  color:#333333;
+  margin-top: 0;
+}
+.answer-list-item p{
+  font-family: "ProximaNova";
+  font-weight: normal;
+  font-size: 2.81vw;
+  color:#333333;
+}
+
+.ripple-button {
+  width:100%;
+  background-color:#FFF;
+}

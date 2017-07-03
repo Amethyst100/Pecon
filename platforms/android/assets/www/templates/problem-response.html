@@ -1,0 +1,80 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      DETALLES DEL CASO!
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header">
+    <div class="case-heading-container">
+      <h5 class="margin0 padding0 case-heading">Caso:</h5>
+      <p class="margin0 padding0 case-heading-text">{{casename}}</p>
+    </div>
+    <div class="case-detail-container">
+      <h5 class="margin0 padding0 case-detail-heading">Descripción:</h5>
+      <p class="margin0 padding0 case-detail-text">{{casedesc}}</p>
+    </div>
+    <!-- <div class="case-answer-container">
+      <h5 class="margin0 padding0 case-answer-heading">CHOOSE ONE ANSWER:</h5>
+    </div> -->
+
+    <!-- <div> -->
+      <!-- <ion-radio ng-model="choice" ng-value="1" ng-click="changeoption(choice)" class="answer-list-item">
+        <h1>Answer One</h1>
+        <p>Had a bad day</p>
+      </ion-radio>
+      <ion-radio ng-model="choice" ng-value="2" ng-click="changeoption(choice)" class="answer-list-item">
+        <h1>Answer Two</h1>
+        <p>I was probably misunderstood</p>
+      </ion-radio>
+      <ion-radio ng-model="choice" ng-value="3" ng-click="changeoption(choice)" class="answer-list-item">
+        <h1>Answer Three</h1>
+        <p>No way that this was me</p>
+      </ion-radio> -->
+
+
+      <!-- <ion-list class="answer-list-container">
+        <ion-item id="" class="answer-list-item">
+          <h1>Answer 1</h1> -->
+          <!-- <h1>Negative facial or physical gestures</h1> -->
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor incididunt ut labore.</p> -->
+        <!-- </ion-item>
+        <ion-item id="" class="answer-list-item">
+          <h1>Answer 2</h1>
+        </ion-item>
+        <ion-item id="" class="answer-list-item">
+          <h1>Answer 3</h1>
+        </ion-item>
+      </ion-list> -->
+    <!-- </div> -->
+    <div>
+      <ion-list class="incident-list-container">
+        <ion-item ng-repeat="question in questions" class="incident-list-item" style="padding:0px">
+          <div class="case-answer-container">
+            <h5 class="margin0 padding0 case-answer-heading">ELIGE UNA RESPUESTA:</h5>
+          </div>
+          <div style="padding:16px">
+            <!-- <h1 style="margin-top:0px">{{question.title}}</h1> -->
+            <p>{{question.question}}</p>
+          </div>
+          <!-- <ion-item ng-repeat="option in question.options" class="incident-list-item"> -->
+            <ion-radio name="{{question._id}}" ng-repeat="option in question.options" ng-model="question.answer" ng-value="option" class="answer-list-item">
+              <p style="padding-left:16px">{{option}}</p>
+            </ion-radio>
+          <!-- </ion-item> -->
+
+        </ion-item>
+      </ion-list>
+    </div>
+    <!-- <div class="confirm-button-container" style="position:relative">
+      <button class="btn-confirm" ng-click="answer()">SUBMIT RESPONSE</button>
+    </div> -->
+
+  </ion-content>
+  <div class="confirm-button-container">
+    <button class="btn-confirm" ng-click="answer()" ng-hide="responded">PRESENTAR RESPUESTA</button>
+  </div>
+</ion-view>

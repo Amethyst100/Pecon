@@ -1,0 +1,48 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      INICIO
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header container margin0 padding0">
+    <div class="margin0 padding0 progress-container">
+      <h5 class="margin0 padding0 progress-heading">Mi espacio</h5>
+    </div>
+    <div class="container-box">
+      <div class="dashboard-buttons-container">
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0" ui-sref="problems">
+            <div class="dashboard-space-button">
+              <img src="img/2EWEtzRTbyMTnNxUbIhD_bully.png" class="dashboard-space-icon">
+              <p style="margin-bottom:0px">Mis infracciones</p>
+              <p style="color:red;font-size:80%;margin:0px" ng-hide=res_notification> {{num_response}} RESPUESTA REQUERIDA</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider-1"></div>
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0" ui-sref="witnessed">
+            <div class="dashboard-space-button">
+              <img src="img/6oyrgz3wTfC1Fad7BaI4_reporter.png" class="dashboard-space-icon">
+              <p>Informe de la comunidad</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider-2"></div>
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0" ui-sref="reported">
+            <div class="dashboard-space-button">
+              <img src="img/yQbJBzRiOaONtNs0LLLg_witness.png" class="dashboard-space-icon">
+              <p>Informe individual</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider-3"></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

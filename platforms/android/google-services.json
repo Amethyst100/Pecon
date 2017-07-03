@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "796505539100",
+    "firebase_url": "https://pecon-519eb.firebaseio.com",
+    "project_id": "pecon-519eb",
+    "storage_bucket": "pecon-519eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796505539100:android:ecb2e992dd548ae0",
+        "android_client_info": {
+          "package_name": "com.ionicframework.pecon917294"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796505539100-476r6ksf8dmcevjpqssa9jrb0ohh4mvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuVdpWARXB9GHNVlEF0exNEhVfjXFDA98"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

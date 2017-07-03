@@ -1,0 +1,33 @@
+<ion-view title="Login" hide-nav-bar="true" class="background">
+  <ion-content class="manual-ios-statusbar-padding container">
+    <div class="row logo-container-parent">
+      <div class="margin0 padding0 marginTop20vw logo-container">
+        <img class="logo" src="img/oWWmwp1MSFyES39ohfKe_logo.png">
+      </div>
+      <div class="margin0 padding0 logo-text-container">
+        <h1 class="logo-heading show-list-numbers-and-dots margin0">PECON</h1>
+        <p class="logo-line margin0" style="font-size:5.02vw">¡Denuncia un incidente!</p>
+      </div>
+    </div>
+    <div class="margin0 form-container">
+      <p><span class="error">{{err}}</span></p>
+      <form class="list margin0 padding0">
+          <label class="item item-input height60 {{err ? 'error-bg' :''}}">
+            <span class="input-label"><i class="icon ion-person"></i></span>
+            <input class="height12perc" type="text" ng-model="data.username">
+          </label>
+          <label class="item item-input marginTop15 height60 {{err ? 'error-bg' :''}}">
+            <span class="input-label"><i class="icon ion-locked"></i></span>
+            <input class="height12perc" type="password" ng-model="data.password">
+          </label>
+        <div class="show-list-numbers-and-dots text-right">
+          <p class="forgot">¿Olvidaste tu contraseña?</p>
+        </div>
+        <div ng-show="isProcessing" class="spinner-container">
+          <ion-spinner icon="spiral"></ion-spinner>
+        </div>
+        <button ion-ripple ng-hide="isProcessing" ng-click="login(data)" class="button  button-block">Entrar</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      INFORME INDIVIDUAL
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header">
+    <div class="what-heading-container">
+      <h5 class="margin0 padding0 what-heading">PECONS RECIBIDOS EN LA ÚLTIMA SEMANA</h5>
+      <ion-item class="incident-list-item">
+        <h1>Número de Pecons</h1>
+        <p>{{num_cases}}</p>
+      </ion-item>
+      <h5 class="margin0 padding0 what-heading">LISTA DE PECONS</h5>
+      <ion-list class="incident-list-container">
+        <ion-item ng-repeat="case in cases" class="incident-list-item">
+          <h1>{{case.incidenttype.title}}.</h1>
+          <p style="width:100%;float:left">{{case.incidenttype.description}}.</p>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

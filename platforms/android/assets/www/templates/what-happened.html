@@ -1,0 +1,24 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      ¿QUÉ HA PASADO?
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header">
+    <div class="what-heading-container">
+      <h5 class="margin0 padding0 what-heading">ELIGE UNO</h5>
+      <ion-list class="incident-list-container">
+        <ion-item style="padding:0px;margin:0px" ng-repeat="incident in incidents" class="incident-list-item" ng-click="save(incident)" >
+          <ion-radio name="{{incident._id}}" ng-model="incident.selected" ng-value="selected" class="answer-list-item">
+            <p style="padding-left:16px"><h1>{{incident.title}}.</h1>
+            <p>{{incident.description}}.</p></p>
+          </ion-radio>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

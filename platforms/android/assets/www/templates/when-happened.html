@@ -1,0 +1,26 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      ¿CUÁNDO HA PASADO?
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header" scroll="false">
+    <div class="date-time-icon-container">
+      <div class="time-button" ion-datetime-picker time title="'Elige una hora'" ng-model="timeValue">
+        <img src="img/0c5MwOrZTZOqEADrgP1K_clock-icon-png-10761.png">
+        <p>{{timeValue| date: "H:mm"}}</p>
+      </div>
+      <div class="date-button"  ion-datetime-picker date title="'Elige una fecha'" ng-model="dateValue" monday-first only-valid="{'between': {'initial': minDate, 'final': 'today'}, 'inclusive': true}">
+        <img src="img/lP7oVI6hTWqrwuWenZ8z_calandaricon.png">
+        <p>{{dateValue| date: "yyyy-MM-dd"}}</p>
+      </div>
+    </div>
+    <div class="confirm-button-container">
+      <button class="btn-confirm" ng-click="save(dateValue, timeValue)">CONFIRMAR</button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <!-- <script src="lib/ionic.cloud.min.js"></script> -->
+
+  <!-- firebase & angularfire libraries -->
+  <!-- <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script> -->
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
+  <link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+  <link href="lib/ion-ripple/ion-ripple.css" rel="stylesheet">
+  <script src="lib/ion-ripple/ion-ripple.min.js"></script>
+
+  <style type="text/css">
+    .platform-ios .manual-ios-statusbar-padding {
+      padding-top: 20px;
+    }
+
+    .manual-remove-top-padding {
+      padding-top: 0px;
+    }
+
+    .manual-remove-top-padding .scroll {
+      padding-top: 0px !important;
+    }
+
+    ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+      border-radius: 0px;
+      border-left: 0px;
+      border-right: 0px;
+    }
+
+    .show-list-numbers-and-dots ul {
+      list-style-type: disc;
+      padding-left: 40px;
+    }
+
+    .show-list-numbers-and-dots ol {
+      list-style-type: decimal;
+      padding-left: 40px;
+    }
+  </style>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/services.js"></script>
+
+  <!-- Only required for Tab projects w/ pages in multiple tabs-->
+  <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+
+</head>
+
+<body ng-app="app" animation="slide-left-right-ios7" style="width:200px" class="platform-android platform-cordova platform-webview">
+<div ng-controller="appCtrl">
+  <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+    <ion-side-menu-content>
+      <ion-nav-view>
+      </ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+      <ion-header-bar class="bar-stable">
+        <div class="title">Menú</div>
+      </ion-header-bar>
+      <ion-content ng-controller="menuCtrl" padding="false" class="side-menu-left has-header ">
+        <ion-list id="menu-list15" data-componentid="list15">
+          <ion-item class="item-icon-left" id="menu-list-item22" ui-sref="tabs-controller.dashboard-report" menu-close="" data-componentid="list-item22">
+            <i class="icon ion-home"></i>INICIO
+          </ion-item>
+          <ion-item class="item-icon-left" id="menu-list-item24" ui-sref="tabs-controller.dashboard-my-space" menu-close="" data-componentid="list-item24">
+            <i class="icon ion-ipad"></i>MI ESPACIO
+          </ion-item>
+          <ion-item class="item-icon-left" id="menu-list-item23" ng-click="logout()" menu-close="" data-componentid="list-item23">
+            <i class="icon ion-log-out"></i>DESCONECTAR
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</div>
+</body>
+</html>

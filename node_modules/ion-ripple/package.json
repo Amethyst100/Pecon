@@ -1,0 +1,111 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ion-ripple",
+        "scope": null,
+        "escapedName": "ion-ripple",
+        "name": "ion-ripple",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\ASAD\\Desktop\\Ahmed\\pecon"
+    ]
+  ],
+  "_from": "ion-ripple@latest",
+  "_id": "ion-ripple@1.1.0",
+  "_inCache": true,
+  "_location": "/ion-ripple",
+  "_nodeVersion": "6.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ion-ripple-1.1.0.tgz_1479201372231_0.8100911432411522"
+  },
+  "_npmUser": {
+    "name": "bobrov1989",
+    "email": "bobrov1989@gmail.com"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ion-ripple",
+    "scope": null,
+    "escapedName": "ion-ripple",
+    "name": "ion-ripple",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ion-ripple/-/ion-ripple-1.1.0.tgz",
+  "_shasum": "e483c3ab433ff624da4f41767a6510555c9ced65",
+  "_shrinkwrap": null,
+  "_spec": "ion-ripple",
+  "_where": "C:\\Users\\ASAD\\Desktop\\Ahmed\\pecon",
+  "author": {
+    "name": "Vitaliy Bobrov"
+  },
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/ion-ripple/issues"
+  },
+  "dependencies": {},
+  "description": "A standalone Ionic implementation of the Google Material Design ripple effect.",
+  "devDependencies": {
+    "autoprefixer": "^6.0.2",
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "htmlhint-stylish": "^1.0.3",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.0.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "e483c3ab433ff624da4f41767a6510555c9ced65",
+    "tarball": "https://registry.npmjs.org/ion-ripple/-/ion-ripple-1.1.0.tgz"
+  },
+  "gitHead": "323ef12deb77d17795cd9a6c93bbffec528885af",
+  "homepage": "https://github.com/vitaliy-bobrov/ion-ripple#readme",
+  "keywords": [
+    "ionic",
+    "mobile",
+    "html5",
+    "cordova",
+    "phonegap",
+    "angularjs",
+    "angular",
+    "ripple",
+    "google",
+    "material"
+  ],
+  "license": "MIT",
+  "main": "ion-ripple.js",
+  "maintainers": [
+    {
+      "name": "bobrov1989",
+      "email": "bobrov1989@gmail.com"
+    }
+  ],
+  "name": "ion-ripple",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/ion-ripple.git"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "version": "1.1.0"
+}

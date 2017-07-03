@@ -1,0 +1,42 @@
+<ion-view cache-view="true">
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      ¿QUIÉN LO HA HECHO?
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header" style="bottom:17vw">
+
+    <div class="what-heading-container">
+      <h5 class="margin0 padding0 what-heading">ELIGE UNO O MÁS</h5>
+      <ion-list class="incident-list-container">
+        <ion-item class="incident-list-item"  ng-repeat="student in students">
+          <div style="float:left">
+            <img class="avatar" actual-src="{{student.pic}}" alt="" ng-src="img/default.png"/>
+            <h1>{{student.name}}</h1>
+            <p>Curso: {{student.grade}}</p>
+          </div>
+          <label class="toggle" style="float:right;margin-top:5vw">
+            <p style="color:green" ng-show=student.witness>TESTIGO</p>
+            <p style="color:blue" ng-show=student.victim>VÍCTIMA</p>
+            <div ng-hide="student.witness">
+              <div ng-hide="student.victim">
+                <input type="checkbox" ng-model=student.offender ng-click="add(student, student.offender, student.witness, student.victim)">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </div>
+            </div>
+          </label>
+          <!-- <ion-option-button ng-click="add(student)" class="button-positive">Select</ion-option-button> -->
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+  <div class="confirm-button-container">
+    <button ion-ripple class="btn-confirm" ng-click="save()">CONFIRMAR</button>
+  </div>
+</ion-view>

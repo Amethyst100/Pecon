@@ -1,0 +1,113 @@
+<ion-view>
+  <ion-nav-bar align-title="center" ng-show="$root.showMenuIcon" class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      INICIO
+    </ion-nav-title>
+  </ion-nav-bar>
+  <ion-content class="has-header container margin0 padding0">
+    <div class="margin0 padding0 progress-container">
+      <h5 class="margin0 padding0 progress-heading">PROGRESO:</h5>
+      <div class="padding0 progress-status-container">
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0">
+            <div class="row">
+              <p class="status col-xs-4">INFRACCIÓN: <i class="icon {{disorderStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+              <p class="status col-xs-4" ng-hide="victimNotRequired">VÍCTIMA: <i class="icon {{victimStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+              <p class="status col-xs-4" ng-show="victimNotRequired">VÍCTIMA: <i class="icon ion-ios-circle-filled"></i></p>
+              <p class="status col-xs-5">PROVOCADOR/A: <i class="icon {{offenderStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0">
+            <div class="row">
+              <p class="status col-xs-4">LUGAR: <i class="icon {{placeStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+              <p class="status col-xs-4">HORA: <i class="icon {{timeStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="margin0 padding0 progress-heading">OPCIONAL:</h5>
+      <div class="padding0 progress-status-container">
+        <div class="row">
+          <div class="col-xs-12 margin0 padding0">
+            <div class="row">
+              <p class="status col-xs-4">TESTIGO: <i class="icon {{witnessStatus ? 'ion-checkmark-round' :'ion-close-round'}}"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" ng-show="offenderInvalid" style="background-color:red;color:white;padding-bottom:1px">
+      <span class="input-label" style="margin-left:10px;margin-right:0px;color:white"><i class="icon ion-ios-close"></i></span>
+      <p style="padding:6px;margin:0px">No puede presentar un caso como delincuente</p>
+    </div>
+    <div class="row" ng-show="reporterInvalid" style="background-color:red;color:white;padding-bottom:1px">
+      <span class="input-label" style="margin-left:10px;margin-right:0px;color:white"><i class="icon ion-ios-close"></i></span>
+      <p style="padding:6px;margin:0px">Debe marcarse como víctima o testigo</p>
+    </div>
+    <button ion-ripple ng-show="submitResponseButtonStatus" class="btn-confirm btn-save-disorder" ng-click="save()">¡ENVIAR PECON!</button>
+    <div class="container-box">
+      <div class="dashboard-buttons-container">
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col-xs-6 margin0 padding0" ui-sref="what-happened">
+            <div class="dashboard-report-button">
+              <img src="img/TZKROXIIQH9g0YuOkrtw_lightning.png" class="dashboard-report-icon">
+              <p>ELIGE INFRACCIÓN</p>
+            </div>
+          </div>
+          <div class="col-xs-6 margin0 padding0" ui-sref="to-whom" ng-hide="victimNotRequired">
+            <div class="dashboard-report-button">
+              <img src="img/RpKidk1SUa1zl4aHQXjQ_victim.png" class="dashboard-report-icon">
+              <p>ELIGE VÍCTIMA</p>
+            </div>
+          </div>
+          <div class="col-xs-6 margin0 padding0" style="opacity: 0.6;" ng-show="victimNotRequired">
+            <div class="dashboard-report-button">
+              <img src="img/RpKidk1SUa1zl4aHQXjQ_victim.png" class="dashboard-report-icon">
+              <p>ELIGE VÍCTIMA</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider-1"></div>
+        <div class="row">
+          <div class="col-xs-6 margin0 padding0" ui-sref="who-did-it">
+            <div class="dashboard-report-button">
+              <img src="img/fGy36vAQQ4iRk2S5f8YP_bully.png" class="dashboard-report-icon">
+              <p>ELIGE PROVOCADOR/A</p>
+            </div>
+          </div>
+          <div class="col-xs-6 margin0 padding0" ui-sref="who-saw-it">
+            <div class="dashboard-report-button">
+              <img src="img/9TtWHp4TMOZulJvnOJn5_witness.png" class="dashboard-report-icon">
+              <p>ELIGE TESTIGO</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="divider-2"></div>
+        <div class="row">
+          <div class="col-xs-6 margin0 padding0" ui-sref="where-happened">
+            <div class="dashboard-report-button">
+              <img src="img/bSrM7MeQH6wOP2Rey55g_place.png" class="dashboard-report-icon">
+              <p>ELIGE LUGAR</p>
+            </div>
+          </div>
+          <div class="col-xs-6 margin0 padding0" ui-sref="when-happened">
+            <div class="dashboard-report-button">
+              <img src="img/RBDBMCZSOqNPVJnmXmrw_d-and-t.png" class="dashboard-report-icon">
+              <p style="color:#562F72;">ELIGE FECHA/HORA</p>
+            </div>
+          </div>
+        </div>
+        <div class="divider-3"></div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
